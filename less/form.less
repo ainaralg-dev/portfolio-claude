@@ -1,0 +1,80 @@
+// ==========================================================================
+// Formulario de contacto
+// ==========================================================================
+
+.contact {
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+		max-width: 480px;
+		margin: 0 auto;
+		text-align: left;
+	}
+
+	&__form-message {
+		display: none;
+		font-size: 14px;
+		font-weight: 600;
+
+		&--success {
+			display: block;
+			color: @color-success;
+		}
+
+		&--error {
+			display: block;
+			color: @color-error;
+		}
+	}
+}
+
+.form-field {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+
+	&__label {
+		font-size: 14px;
+		font-weight: 600;
+		color: @color-text;
+	}
+
+	&__input {
+		width: 100%;
+		padding: 12px 16px;
+		font-family: @font-base;
+		font-size: 15px;
+		color: @color-text;
+		background: @color-bg;
+		border: 1px solid @color-border;
+		border-radius: @radius;
+		transition: border-color @transition;
+
+		&:focus {
+			outline: none;
+			border-color: @color-primary;
+		}
+
+		&--textarea {
+			resize: vertical;
+			min-height: 120px;
+		}
+	}
+
+	&__error {
+		display: none;
+		font-size: 13px;
+		color: @color-error;
+	}
+
+	&--error {
+		.form-field__input {
+			border-color: @color-error;
+		}
+
+		.form-field__error {
+			display: block;
+		}
+	}
+}
