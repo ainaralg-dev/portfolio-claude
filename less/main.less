@@ -9,6 +9,8 @@
 @color-primary-dark: #3f37c9;
 @color-surface: #f5f6fa;
 @color-border: #e4e6ec;
+@color-success: #1a9c5a;
+@color-error: #d9432e;
 
 @font-base: 'Helvetica Neue', Arial, sans-serif;
 
@@ -440,11 +442,12 @@ img {
 	border-radius: @radius;
 	overflow: hidden;
 	border: 1px solid @color-border;
-	transition: transform @transition, box-shadow @transition;
+	transition: transform @transition, box-shadow @transition, border-color @transition;
 
 	&:hover {
 		transform: translateY(-4px);
 		box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+		border-color: @color-primary;
 	}
 
 	&__image {
@@ -464,6 +467,17 @@ img {
 			color: @color-text-light;
 			font-size: 14px;
 		}
+	}
+
+	&__tag {
+		display: inline-block;
+		margin-bottom: 10px;
+		padding: 4px 12px;
+		border-radius: 999px;
+		background: fade(@color-primary, 10%);
+		color: @color-primary;
+		font-size: 12px;
+		font-weight: 600;
 	}
 }
 
@@ -505,6 +519,8 @@ img {
 		margin-bottom: 28px;
 	}
 }
+
+@import 'form';
 
 // ==========================================================================
 // Footer
