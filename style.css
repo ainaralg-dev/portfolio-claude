@@ -106,6 +106,7 @@ img {
   padding: 120px 0 100px;
   text-align: center;
   background: linear-gradient(180deg, #f5f6fa 0%, #ffffff 100%);
+  background: pink;
 }
 .hero__eyebrow {
   color: #4f46e5;
