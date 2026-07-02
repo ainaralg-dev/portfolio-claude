@@ -181,22 +181,49 @@
 					<article class="card">
 						<div class="card__image" aria-hidden="true"></div>
 						<div class="card__body">
+							<span class="card__tag">WordPress</span>
 							<h3>Proyecto uno</h3>
-							<p>Breve descripción del proyecto y las tecnologías utilizadas.</p>
+							<p>Tienda online con gestión de catálogo y pasarela de pago, construida sobre WordPress y WooCommerce.</p>
 						</div>
 					</article>
 					<article class="card">
 						<div class="card__image" aria-hidden="true"></div>
 						<div class="card__body">
+							<span class="card__tag">Diseño a medida</span>
 							<h3>Proyecto dos</h3>
-							<p>Breve descripción del proyecto y las tecnologías utilizadas.</p>
+							<p>Portfolio personal maquetado desde cero en HTML y LESS, con especial cuidado en la identidad visual.</p>
 						</div>
 					</article>
 					<article class="card">
 						<div class="card__image" aria-hidden="true"></div>
 						<div class="card__body">
+							<span class="card__tag">Aplicación web</span>
 							<h3>Proyecto tres</h3>
-							<p>Breve descripción del proyecto y las tecnologías utilizadas.</p>
+							<p>Aplicación de gestión de tareas con JavaScript, pensada para un uso rápido y sin distracciones.</p>
+						</div>
+					</article>
+					<article class="card">
+						<div class="card__image" aria-hidden="true"></div>
+						<div class="card__body">
+							<span class="card__tag">Landing page</span>
+							<h3>Proyecto cuatro</h3>
+							<p>Página de aterrizaje para el lanzamiento de un producto, optimizada para conversión y velocidad de carga.</p>
+						</div>
+					</article>
+					<article class="card">
+						<div class="card__image" aria-hidden="true"></div>
+						<div class="card__body">
+							<span class="card__tag">Blog</span>
+							<h3>Proyecto cinco</h3>
+							<p>Blog personal con sistema de categorías y buscador, maquetado con foco en la legibilidad del contenido.</p>
+						</div>
+					</article>
+					<article class="card">
+						<div class="card__image" aria-hidden="true"></div>
+						<div class="card__body">
+							<span class="card__tag">E-commerce</span>
+							<h3>Proyecto seis</h3>
+							<p>Tienda online a medida con carrito de compra y filtros de producto, sin depender de plantillas externas.</p>
 						</div>
 					</article>
 				</div>
@@ -221,7 +248,30 @@
 			<div class="container">
 				<h2 class="section-title">Contacto</h2>
 				<p class="contact__text">¿Tienes un proyecto en mente? Escríbeme y hablamos.</p>
-				<a href="mailto:hola@ainara.dev" class="btn btn--primary">Enviar un email</a>
+
+				<form id="contact-form" class="contact__form" novalidate>
+					<div class="form-field">
+						<label for="contact-name" class="form-field__label">Nombre</label>
+						<input type="text" id="contact-name" name="name" class="form-field__input" autocomplete="name" required>
+						<span class="form-field__error">Por favor, indica tu nombre.</span>
+					</div>
+
+					<div class="form-field">
+						<label for="contact-email" class="form-field__label">Email</label>
+						<input type="email" id="contact-email" name="email" class="form-field__input" autocomplete="email" required>
+						<span class="form-field__error">Por favor, indica un email válido.</span>
+					</div>
+
+					<div class="form-field">
+						<label for="contact-message" class="form-field__label">Mensaje</label>
+						<textarea id="contact-message" name="message" class="form-field__input form-field__input--textarea" rows="5" required></textarea>
+						<span class="form-field__error">Por favor, escribe tu mensaje.</span>
+					</div>
+
+					<p id="contact-form-message" class="contact__form-message" role="status" aria-live="polite"></p>
+
+					<button type="submit" class="btn btn--primary">Enviar mensaje</button>
+				</form>
 			</div>
 		</section>
 
@@ -233,5 +283,7 @@
 		</div>
 	</footer>
 
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
